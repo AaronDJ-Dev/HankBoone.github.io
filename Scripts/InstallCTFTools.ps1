@@ -59,7 +59,7 @@ Start-BitsTransfer -Source $source -Destination $destination
 CLEAR
 
 <# Download NMAP Windows #>
-[reflection.assembly]::loadwithpartialname('System.Windows.Forms')nmap-7.92-setup.exe
+[reflection.assembly]::loadwithpartialname('System.Windows.Forms')
 [reflection.assembly]::loadwithpartialname('System.Drawing')
 $notify = new-object system.windows.forms.notifyicon
 $notify.icon = [System.Drawing.SystemIcons]::Information
