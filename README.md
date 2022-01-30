@@ -93,6 +93,7 @@
     </td>
   </tr>
   <tr>
+    <td>
     <img src="Media/Ubuntu.png" class="img-responsive" alt="" width="35" height="35">
     </td>
     <td>
