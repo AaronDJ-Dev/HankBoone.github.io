@@ -1,4 +1,5 @@
 ![test](https://github.com/HankBoone/CTFTools/blob/main/Media/CTFTools.png)
+[Download CTFTools Installer Script](https://github.com/HankBoone/CTFTools/blob/main/Scripts/InstallCTFTools.ps1)
 <table>
   <tr>
     <td>
