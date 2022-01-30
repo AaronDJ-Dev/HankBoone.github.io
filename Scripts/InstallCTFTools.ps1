@@ -37,16 +37,6 @@ Clear-Host
 				$source = 'https://kali.download/virtual-images/kali-2021.4a/kali-linux-2021.4a-vmware-amd64.7z'
 				$destination = "C:\Users\$([Environment]::UserName)\Documents\CTFTools\VMs\kali-linux-2021.4a-vmware-amd64.7z"
 				$job = Start-BitsTransfer -Source $source -Destination $destination -Description "Downloading Kali VMWare" -DisplayName "Kali VMWare"
-				While ($job.JobState -eq "Transferring" -Or $job.JobState -eq "Connecting") {
-    			Start-Sleep -Seconds 20
-				}
-
-				If ($job.InternalErrorCode -ne 0) {
-    			("Error downloading the file {0}" -f $job.InternalErrorCode) | Out-File C:\downloads\downloaderror.log
-				} else {
-    			#Do something here
-    			#Stop-Computer -Force
-				}
                 Write-Output $message
 				Clear-Host
 
@@ -60,9 +50,8 @@ Clear-Host
 				$notify.showballoontip(10,'Burp Suite','Downloading Burp Suite Windows Version',[system.windows.forms.tooltipicon]::None)
 				$source = 'https://raw.githubusercontent.com/HankBoone/HankBoone.github.io/main/Installers/burpsuite_community_windows-x64_v2021_12_1.exe'
 				$destination = "C:\Users\$([Environment]::UserName)\Documents\CTFTools\Installers\burpsuite_community_windows-x64_v2021_12_1.exe"
-				Invoke-WebRequest -Uri $source -OutFile $destination -
+				Invoke-WebRequest -Uri $source -OutFile $destination
                 Write-Output $message
-				Clear-Host
 
                 $message = "Metasploit Downloaded!"
 				<# Download Metasploit Windows #>
