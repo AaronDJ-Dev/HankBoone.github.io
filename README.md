@@ -1,4 +1,4 @@
-<img src="https://github.com/HankBoone/CTFTools/blob/main/Media/CTFTools.png" />
+<img src="https://HankBoone.github.io/Media/CTFTools.png" />
 
 <table>
   <tr>
