@@ -17,7 +17,7 @@ $notify = new-object system.windows.forms.notifyicon
 $notify.icon = [System.Drawing.SystemIcons]::Information
 $notify.visible = $true
 $notify.showballoontip(10,'Kali VMWare','Downloading VMWare Kali VM',[system.windows.forms.tooltipicon]::None)
-$source = 'https://kali.download/virtual-images/kali-2021.4a/kali-linux-2021.4a-vmware-amd64.7z'
+$source = 'https://github.com/HankBoone/HankBoone.github.io/tree/main/VMs/kali-linux-2021.4a-vmware-amd64.7z'
 $destination = "C:\Users\$([Environment]::UserName)\Documents\CTFTools\VMs\kali-linux-2021.4a-vmware-amd64.7z"
 Start-BitsTransfer -Source $source -Destination $destination
 CLEAR
