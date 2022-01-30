@@ -1,4 +1,11 @@
 ![test](https://github.com/HankBoone/CTFTools/blob/main/Media/CTFTools.png)
+<table>
+  <tr>
+    <td>
+    <a href="https://github.com/HankBoone/CTFTools/blob/main/Scripts/InstallCTFTools.ps1" download>Download CTFTools Installer Script</a>
+    </td>
+  </tr>
+  </table>
 
 <table>
   <h2><a href="https://github.com/HankBoone/CTFTools/tree/main/Installers">Installers</a></h2>
