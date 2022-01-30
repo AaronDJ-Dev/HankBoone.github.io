@@ -36,13 +36,13 @@ Clear-Host
 				$notify.showballoontip(10,'Kali VMWare','Downloading VMWare Kali VM',[system.windows.forms.tooltipicon]::None)
 				$source = 'https://kali.download/virtual-images/kali-2021.4a/kali-linux-2021.4a-vmware-amd64.7z'
 				$destination = "C:\Users\$([Environment]::UserName)\Documents\CTFTools\VMs\kali-linux-2021.4a-vmware-amd64.7z"
-				$job = Start-BitsTransfer -Source $source -Destination $destination -DisplayName "Kali VMWare" -Description "Downloading Kali VMWare"
-				While ($job.JobState -eq "Transferring" -Or $job.JobState -eq "Connecting") {
+				$job1 = Start-BitsTransfer -Source $source -Destination $destination -DisplayName "Kali VMWare" -Description "Downloading Kali VMWare"
+				While ($job1.JobState -eq "Transferring" -Or $job1.JobState -eq "Connecting") {
     			Start-Sleep -Seconds 20
 				}
 
-				If ($job.InternalErrorCode -ne 0) {
-    			("Error downloading the file {0}" -f $job.InternalErrorCode) | Out-File C:\downloads\downloaderror.log
+				If ($job1.InternalErrorCode -ne 0) {
+    			("Error downloading the file {0}" -f $job1.InternalErrorCode) | Out-File C:\downloads\downloaderror.log
 				} else {
     			#Do something here
     			#Stop-Computer -Force
@@ -60,13 +60,13 @@ Clear-Host
 				$notify.showballoontip(10,'Burp Suite','Downloading Burp Suite Windows Version',[system.windows.forms.tooltipicon]::None)
 				$source = 'https://media.githubusercontent.com/media/HankBoone/HankBoone.github.io/main/Installers/burpsuite_community_windows-x64_v2021_12_1.exe'
 				$destination = "C:\Users\$([Environment]::UserName)\Documents\CTFTools\Installers\burpsuite_community_windows-x64_v2021_12_1.exe"
-				$job = Start-BitsTransfer -Source $source -Destination $destination -DisplayName "Burp Suite" -Description "Downloading Burp Suite" -Dynamic
-				While ($job.JobState -eq "Transferring" -Or $job.JobState -eq "Connecting") {
+				$job2 = Start-BitsTransfer -Source $source -Destination $destination -DisplayName "Burp Suite" -Description "Downloading Burp Suite" -Dynamic
+				While ($job2.JobState -eq "Transferring" -Or $job2.JobState -eq "Connecting") {
     			Start-Sleep -Seconds 20
 				}
 
-				If ($job.InternalErrorCode -ne 0) {
-    			("Error downloading the file {0}" -f $job.InternalErrorCode) | Out-File C:\downloads\downloaderror.log
+				If ($job2.InternalErrorCode -ne 0) {
+    			("Error downloading the file {0}" -f $job2.InternalErrorCode) | Out-File C:\downloads\downloaderror.log
 				} else {
     			#Do something here
     			#Stop-Computer -Force
@@ -84,13 +84,13 @@ Clear-Host
 				$notify.showballoontip(10,'Metasploit','Downloading Metasploit Windows Version',[system.windows.forms.tooltipicon]::None)
 				$source = 'https://media.githubusercontent.com/media/HankBoone/HankBoone.github.io/main/Installers/metasploitframework-latest.msi'
 				$destination = "C:\Users\$([Environment]::UserName)\Documents\CTFTools\Installers\metasploitframework-latest.msi"
-				$job = Start-BitsTransfer -Source $source -Destination $destination -DisplayName "Metasploit" -Description "Downloading Metasploit" -Dynamic
-				While ($job.JobState -eq "Transferring" -Or $job.JobState -eq "Connecting") {
+				$job3 = Start-BitsTransfer -Source $source -Destination $destination -DisplayName "Metasploit" -Description "Downloading Metasploit" -Dynamic
+				While ($job3.JobState -eq "Transferring" -Or $job3.JobState -eq "Connecting") {
     			Start-Sleep -Seconds 20
 				}
 
-				If ($job.InternalErrorCode -ne 0) {
-    			("Error downloading the file {0}" -f $job.InternalErrorCode) | Out-File C:\downloads\downloaderror.log
+				If ($job3.InternalErrorCode -ne 0) {
+    			("Error downloading the file {0}" -f $job3.InternalErrorCode) | Out-File C:\downloads\downloaderror.log
 				} else {
     			#Do something here
     			#Stop-Computer -Force
@@ -108,13 +108,13 @@ Clear-Host
 				$notify.showballoontip(10,'Wireshark','Downloading Wireshark Windows Edition',[system.windows.forms.tooltipicon]::None)
 				$source = 'https://media.githubusercontent.com/media/HankBoone/HankBoone.github.io/main/Installers/Wireshark-win64-3.6.1.exe'
 				$destination = "C:\Users\$([Environment]::UserName)\Documents\CTFTools\Installers\Wireshark-win64-3.6.1.exe"
-				$job = Start-BitsTransfer -Source $source -Destination $destination -DisplayName "Wireshark" -Description "Downloading Wireshark" -Dynamic
-				While ($job.JobState -eq "Transferring" -Or $job.JobState -eq "Connecting") {
+				$job4 = Start-BitsTransfer -Source $source -Destination $destination -DisplayName "Wireshark" -Description "Downloading Wireshark" -Dynamic
+				While ($job4.JobState -eq "Transferring" -Or $job4.JobState -eq "Connecting") {
     			Start-Sleep -Seconds 20
 				}
 
-				If ($job.InternalErrorCode -ne 0) {
-    			("Error downloading the file {0}" -f $job.InternalErrorCode) | Out-File C:\downloads\downloaderror.log
+				If ($job4.InternalErrorCode -ne 0) {
+    			("Error downloading the file {0}" -f $job4.InternalErrorCode) | Out-File C:\downloads\downloaderror.log
 				} else {
     			#Do something here
     			#Stop-Computer -Force
@@ -132,13 +132,13 @@ Clear-Host
 				$notify.showballoontip(10,'Nmap','Downloading Nmap Windows Edition',[system.windows.forms.tooltipicon]::None)
 				$source = 'https://media.githubusercontent.com/media/HankBoone/HankBoone.github.io/main/Installers/Installers/nmap-7.92-setup.exe'
 				$destination = "C:\Users\$([Environment]::UserName)\Documents\CTFTools\Installers\nmap-7.92-setup.exe"
-				$job = Start-BitsTransfer -Source $source -Destination $destination -DisplayName "Nmap" -Description "Downloading Nmap" -Dynamic
-				While ($job.JobState -eq "Transferring" -Or $job.JobState -eq "Connecting") {
+				$job5 = Start-BitsTransfer -Source $source -Destination $destination -DisplayName "Nmap" -Description "Downloading Nmap" -Dynamic
+				While ($job5.JobState -eq "Transferring" -Or $job5.JobState -eq "Connecting") {
     			Start-Sleep -Seconds 20
 				}
 
-				If ($job.InternalErrorCode -ne 0) {
-    			("Error downloading the file {0}" -f $job.InternalErrorCode) | Out-File C:\downloads\downloaderror.log
+				If ($job5.InternalErrorCode -ne 0) {
+    			("Error downloading the file {0}" -f $job5.InternalErrorCode) | Out-File C:\downloads\downloaderror.log
 				} else {
     			#Do something here
     			#Stop-Computer -Force
@@ -158,13 +158,13 @@ Clear-Host
 				$notify.showballoontip(10,'Kali VMWare','Downloading VMWare Kali VM',[system.windows.forms.tooltipicon]::None)
 				$source = 'https://kali.download/virtual-images/kali-2021.4a/kali-linux-2021.4a-vmware-amd64.7z'
 				$destination = "C:\Users\$([Environment]::UserName)\Documents\CTFTools\VMs\kali-linux-2021.4a-vmware-amd64.7z"
-				$job = Start-BitsTransfer -Source $source -Destination $destination -DisplayName "Kali VMWare" -Description "Downloading Kali VMWare"
-				While ($job.JobState -eq "Transferring" -Or $job.JobState -eq "Connecting") {
+				$job01 = Start-BitsTransfer -Source $source -Destination $destination -DisplayName "Kali VMWare" -Description "Downloading Kali VMWare"
+				While ($job01.JobState -eq "Transferring" -Or $job01.JobState -eq "Connecting") {
 						Start-Sleep -Seconds 20
 				}
 
-				If ($job.InternalErrorCode -ne 0) {
-						("Error downloading the file {0}" -f $job.InternalErrorCode) | Out-File C:\downloads\downloaderror.log
+				If ($job01.InternalErrorCode -ne 0) {
+						("Error downloading the file {0}" -f $job01.InternalErrorCode) | Out-File C:\downloads\downloaderror.log
 				} else {
 						#Do something here
 						#Stop-Computer -Force
@@ -183,13 +183,13 @@ Clear-Host
 				$notify.showballoontip(10,'Burp Suite','Downloading Burp Suite Windows Version',[system.windows.forms.tooltipicon]::None)
 				$source = 'https://media.githubusercontent.com/media/HankBoone/HankBoone.github.io/main/Installers/burpsuite_community_windows-x64_v2021_12_1.exe'
 				$destination = "C:\Users\$([Environment]::UserName)\Documents\CTFTools\Installers\burpsuite_community_windows-x64_v2021_12_1.exe"
-				$job = Start-BitsTransfer -Source $source -Destination $destination -DisplayName "Burp Suite" -Description "Downloading Burp Suite" -Dynamic
-				While ($job.JobState -eq "Transferring" -Or $job.JobState -eq "Connecting") {
+				$job02 = Start-BitsTransfer -Source $source -Destination $destination -DisplayName "Burp Suite" -Description "Downloading Burp Suite" -Dynamic
+				While ($job02.JobState -eq "Transferring" -Or $job02.JobState -eq "Connecting") {
     			Start-Sleep -Seconds 20
 				}
 
-				If ($job.InternalErrorCode -ne 0) {
-    			("Error downloading the file {0}" -f $job.InternalErrorCode) | Out-File C:\downloads\downloaderror.log
+				If ($job02.InternalErrorCode -ne 0) {
+    			("Error downloading the file {0}" -f $job02.InternalErrorCode) | Out-File C:\downloads\downloaderror.log
 				} else {
     			#Do something here
     			#Stop-Computer -Force
@@ -209,13 +209,13 @@ Clear-Host
 				$notify.showballoontip(10,'Metasploit','Downloading Metasploit Windows Version',[system.windows.forms.tooltipicon]::None)
 				$source = 'https://media.githubusercontent.com/media/HankBoone/HankBoone.github.io/main/Installers/metasploitframework-latest.msi'
 				$destination = "C:\Users\$([Environment]::UserName)\Documents\CTFTools\Installers\metasploitframework-latest.msi"
-				$job = Start-BitsTransfer -Source $source -Destination $destination -DisplayName "Metasploit" -Description "Downloading Metasploit" -Dynamic
-				While ($job.JobState -eq "Transferring" -Or $job.JobState -eq "Connecting") {
+				$job03 = Start-BitsTransfer -Source $source -Destination $destination -DisplayName "Metasploit" -Description "Downloading Metasploit" -Dynamic
+				While ($job03.JobState -eq "Transferring" -Or $job03.JobState -eq "Connecting") {
     			Start-Sleep -Seconds 20
 				}
 
-				If ($job.InternalErrorCode -ne 0) {
-    			("Error downloading the file {0}" -f $job.InternalErrorCode) | Out-File C:\downloads\downloaderror.log
+				If ($job03.InternalErrorCode -ne 0) {
+    			("Error downloading the file {0}" -f $job03.InternalErrorCode) | Out-File C:\downloads\downloaderror.log
 				} else {
     			#Do something here
     			#Stop-Computer -Force
@@ -235,13 +235,13 @@ Clear-Host
 				$notify.showballoontip(10,'Wireshark','Downloading Wireshark Windows Edition',[system.windows.forms.tooltipicon]::None)
 				$source = 'https://media.githubusercontent.com/media/HankBoone/HankBoone.github.io/main/Installers/Wireshark-win64-3.6.1.exe'
 				$destination = "C:\Users\$([Environment]::UserName)\Documents\CTFTools\Installers\Wireshark-win64-3.6.1.exe"
-				$job = Start-BitsTransfer -Source $source -Destination $destination -DisplayName "Wireshark" -Description "Downloading Wireshark" -Dynamic
-				While ($job.JobState -eq "Transferring" -Or $job.JobState -eq "Connecting") {
+				$job04 = Start-BitsTransfer -Source $source -Destination $destination -DisplayName "Wireshark" -Description "Downloading Wireshark" -Dynamic
+				While ($job04.JobState -eq "Transferring" -Or $job04.JobState -eq "Connecting") {
     			Start-Sleep -Seconds 20
 				}
 
-				If ($job.InternalErrorCode -ne 0) {
-    			("Error downloading the file {0}" -f $job.InternalErrorCode) | Out-File C:\downloads\downloaderror.log
+				If ($job04.InternalErrorCode -ne 0) {
+    			("Error downloading the file {0}" -f $job04.InternalErrorCode) | Out-File C:\downloads\downloaderror.log
 				} else {
     			#Do something here
     			#Stop-Computer -Force
@@ -261,13 +261,13 @@ Clear-Host
 				$notify.showballoontip(10,'Nmap','Downloading Nmap Windows Edition',[system.windows.forms.tooltipicon]::None)
 				$source = 'https://media.githubusercontent.com/media/HankBoone/HankBoone.github.io/main/Installers/nmap-7.92-setup.exe'
 				$destination = "C:\Users\$([Environment]::UserName)\Documents\CTFTools\Installers\nmap-7.92-setup.exe"
-				$job = Start-BitsTransfer -Source $source -Destination $destination -DisplayName "Nmap" -Description "Downloading Nmap" -Dynamic
-				While ($job.JobState -eq "Transferring" -Or $job.JobState -eq "Connecting") {
+				$job05 = Start-BitsTransfer -Source $source -Destination $destination -DisplayName "Nmap" -Description "Downloading Nmap" -Dynamic
+				While ($job05.JobState -eq "Transferring" -Or $job05.JobState -eq "Connecting") {
     			Start-Sleep -Seconds 20
 				}
 
-				If ($job.InternalErrorCode -ne 0) {
-    			("Error downloading the file {0}" -f $job.InternalErrorCode) | Out-File C:\downloads\downloaderror.log
+				If ($job05.InternalErrorCode -ne 0) {
+    			("Error downloading the file {0}" -f $job05.InternalErrorCode) | Out-File C:\downloads\downloaderror.log
 				} else {
     			#Do something here
     			#Stop-Computer -Force
