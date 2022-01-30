@@ -19,10 +19,10 @@
     </td>
     <td>
       <p>
-        Burp Suite is an integrated platform/graphical tool for performing
-        security testing of web applications. Its various tools work seamlessly
-        together to support the entire testing process, from initial mapping
-        and analysis of an application's attack surface, through to finding and
+        Burp Suite is an integrated platform/graphical tool for performing__
+        security testing of web applications. Its various tools work seamlessly__
+        together to support the entire testing process, from initial mapping__
+        and analysis of an application's attack surface, through to finding and__
         exploiting security vulnerabilities.
       </p>
     </td>
@@ -36,9 +36,9 @@
     </td>
   <td>
     <p>
-    What is Metasploit used for? The Metasploit framework is a very powerful
-    tool which can be used by cybercriminals as well as ethical hackers to probe
-    systematic vulnerabilities on networks and servers. Because it's an open-source
+    What is Metasploit used for? The Metasploit framework is a very powerful__
+    tool which can be used by cybercriminals as well as ethical hackers to probe__
+    systematic vulnerabilities on networks and servers. Because it's an open-source__
     framework, it can be easily customized and used with most operating systems.
     </p>
   </td>
@@ -52,8 +52,8 @@
     </td>
   <td>
     <p>
-      Wireshark is a free and open-source packet analyzer. It is used for network
-      troubleshooting, analysis, software and communications protocol development,
+      Wireshark is a free and open-source packet analyzer. It is used for network__
+      troubleshooting, analysis, software and communications protocol development,__
       and education.
     </p>
   </td>
@@ -67,8 +67,8 @@
     </td>
   <td>
     <p>
-      Nmap is a network scanner created by Gordon Lyon. Nmap is used to discover
-      hosts and services on a computer network by sending packets and analyzing
+      Nmap is a network scanner created by Gordon Lyon. Nmap is used to discover__
+      hosts and services on a computer network by sending packets and analyzing__
       the responses.
     </p>
   </td>
