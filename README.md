@@ -12,7 +12,7 @@
     </tr>
   <tr>
     <td>
-      <img src="https://github.com/HankBoone/CTFTools/blob/main/Media/Metasploit.png" data-canonical-src="https://github.com/HankBoone/CTFTools/blob/main/Media/Metasploit.png" width="50" height="50" />
+      <img src="https://github.com/HankBoone/CTFTools/blob/main/Media/Metasploit.png" data-canonical-src="https://github.com/HankBoone/CTFTools/blob/main/Media/Metasploit.png" width="35" height="45" />
     </td>
     <td>
       <h4>Metasploit</h4>
