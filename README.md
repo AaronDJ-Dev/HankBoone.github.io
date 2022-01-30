@@ -20,7 +20,7 @@
     </tr>
   <tr>
     <td>
-      <img src="https://github.com/HankBoone/CTFTools/blob/main/Media/Metasploit.png" data-canonical-src="https://github.com/HankBoone/CTFTools/blob/main/Media/Metasploit.png" width="50" height="50" />
+      <img src="https://github.com/HankBoone/CTFTools/blob/main/Media/WireShark.png" data-canonical-src="https://github.com/HankBoone/CTFTools/blob/main/Media/WireShark.png" width="35" height="35" />
     </td>
     <td>
       <h4>Wireshark</h4>
@@ -28,10 +28,10 @@
     </tr>
   <tr>
     <td>
-      <img src="https://github.com/HankBoone/CTFTools/blob/main/Media/Metasploit.png" data-canonical-src="https://github.com/HankBoone/CTFTools/blob/main/Media/Metasploit.png" width="50" height="50" />
+      <img src="https://github.com/HankBoone/CTFTools/blob/main/Media/Nmap.png" data-canonical-src="https://github.com/HankBoone/CTFTools/blob/main/Media/Nmap.png" width="35" height="35" />
     </td>
     <td>
-      <h4>Nmap</h4>
+      <h4>NMAP</h4>
     </td>
     </tr>
 </table>
@@ -39,23 +39,25 @@
   <h2><a href="https://github.com/HankBoone/CTFTools/tree/main/VMs">Virtual Machines</a></h2>
   <tr>
     <td>
+      <img src="https://github.com/HankBoone/CTFTools/blob/main/Media/Kali.png" data-canonical-src="https://github.com/HankBoone/CTFTools/blob/main/Media/Kali.png" width="35" height="35" />
     </td>
     <td>
-      #### Kali Linux
-    </td>
-  </tr>
-  <tr>
-    <td>
-    </td>
-    <td>
-      #### ParrotOS
+      <h4>Kali Linux</h4>
     </td>
   </tr>
   <tr>
     <td>
+      <img src="https://github.com/HankBoone/CTFTools/blob/main/Media/ParrotOS.png" data-canonical-src="https://github.com/HankBoone/CTFTools/blob/main/Media/ParrotOS.png" width="35" height="35" />
     </td>
     <td>
-      #### Ubuntu
+      <h4>ParrotOS</h4>
+    </td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/HankBoone/CTFTools/blob/main/Media/Ubuntu.png" data-canonical-src="https://github.com/HankBoone/CTFTools/blob/main/Media/Ubuntu.png" width="35" height="35" />
+    </td>
+    <td>
+      <h4>Ubuntu</h4>
     </td>
   </tr>
   </table>
