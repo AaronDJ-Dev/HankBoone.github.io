@@ -36,7 +36,7 @@ Clear-Host
 				$notify.showballoontip(10,'Kali VMWare','Downloading VMWare Kali VM',[system.windows.forms.tooltipicon]::None)
 				$source = 'https://kali.download/virtual-images/kali-2021.4a/kali-linux-2021.4a-vmware-amd64.7z'
 				$destination = "C:\Users\$([Environment]::UserName)\Documents\CTFTools\VMs\kali-linux-2021.4a-vmware-amd64.7z"
-				$job = Start-BitsTransfer -Source $source -Destination $destination
+				$job = Start-BitsTransfer -Source $source -Destination $destination -DisplayName "Kali VMWare" -Description "Downloading Kali VMWare"
 				While ($job.JobState -eq "Transferring" -Or $job.JobState -eq "Connecting") {
     			Start-Sleep -Seconds 20
 				}
@@ -118,7 +118,7 @@ Clear-Host
 				$notify.showballoontip(10,'Kali VMWare','Downloading VMWare Kali VM',[system.windows.forms.tooltipicon]::None)
 				$source = 'https://kali.download/virtual-images/kali-2021.4a/kali-linux-2021.4a-vmware-amd64.7z'
 				$destination = "C:\Users\$([Environment]::UserName)\Documents\CTFTools\VMs\kali-linux-2021.4a-vmware-amd64.7z"
-				$job = Start-BitsTransfer -Source $source -Destination $destination
+				$job = Start-BitsTransfer -Source $source -Destination $destination -DisplayName "Kali VMWare" -Description "Downloading Kali VMWare"
 				While ($job.JobState -eq "Transferring" -Or $job.JobState -eq "Connecting") {
 						Start-Sleep -Seconds 20
 				}
