@@ -9,6 +9,15 @@
     <td>
       <h4>Burp Suite</h4>
     </td>
+    <td>
+      <p>
+        Burp Suite is an integrated platform/graphical tool for performing
+  </br> security testing of web applications. Its various tools work seamlessly
+  </br> together to support the entire testing process, from initial mapping
+  </br> and analysis of an application's attack surface, through to finding and
+  </br> exploiting security vulnerabilities.
+      </p>
+    </td>
     </tr>
   <tr>
     <td>
