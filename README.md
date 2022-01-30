@@ -50,7 +50,7 @@
       <img src="https://github.com/HankBoone/CTFTools/blob/main/Media/ParrotOS.png" data-canonical-src="https://github.com/HankBoone/CTFTools/blob/main/Media/ParrotOS.png" width="35" height="35" />
     </td>
     <td>
-      <h4>ParrotOS</h4>
+      <h4>Parrot OS</h4>
     </td>
   </tr>
   <tr>
