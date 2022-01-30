@@ -1,5 +1,5 @@
 ![test](https://github.com/HankBoone/CTFTools/blob/main/Media/CTFTools.png)
-[Download CTFTools Installer Script](https://github.com/HankBoone/CTFTools/blob/main/Scripts/InstallCTFTools.ps1)
+<a id="raw-url" href="https://raw.githubusercontent.com/HankBoone/CTFTools/main/Scripts/InstallCTFTools.ps1">Download FILE</a>
 <table>
   <tr>
     <td>
