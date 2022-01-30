@@ -69,3 +69,4 @@ $source = 'https://github.com/HankBoone/HankBoone.github.io/blob/main/Installers
 $destination = "C:\Users\$([Environment]::UserName)\Documents\CTFTools\Installers\nmap-7.92-setup.exe"
 Start-BitsTransfer -Source $source -Destination $destination
 CLEAR
+ii "C:\Users\$([Environment]::UserName)\Documents\CTFTools"
