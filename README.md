@@ -27,11 +27,12 @@
       <h4>Metasploit</h4>
     </td>
   <td>
-    What is Metasploit used for?
-The Metasploit framework is a very powerful
+    <p>
+    What is Metasploit used for? The Metasploit framework is a very powerful
     </br> tool which can be used by cybercriminals as well as ethical hackers to probe
     </br> systematic vulnerabilities on networks and servers. Because it's an open-source
     </br> framework, it can be easily customized and used with most operating systems.
+    </p>
   </td>
     </tr>
   <tr>
@@ -41,6 +42,13 @@ The Metasploit framework is a very powerful
     <td>
       <h4>Wireshark</h4>
     </td>
+  <td>
+    <p>
+      Wireshark is a free and open-source packet analyzer. It is used for network
+</br> troubleshooting, analysis, software and communications protocol development,
+  </br> and education.
+    </p>
+  </td>
     </tr>
   <tr>
     <td>
@@ -49,6 +57,13 @@ The Metasploit framework is a very powerful
     <td>
       <h4>NMAP</h4>
     </td>
+  <td>
+    <p>
+      Nmap is a network scanner created by Gordon Lyon. Nmap is used to discover
+</br> hosts and services on a computer network by sending packets and analyzing
+  </br> the responses.
+    </p>
+  </td>
     </tr>
 </table>
 <table>
