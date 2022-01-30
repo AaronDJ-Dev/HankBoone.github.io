@@ -12,7 +12,7 @@
   <h2><a href="https://github.com/HankBoone/CTFTools/tree/main/Installers">Installers</a></h2>
   <tr>
     <td>
-      <img src="https://github.com/HankBoone/CTFTools/blob/main/Media/BurpSuite.png" data-canonical-src="https://github.com/HankBoone/CTFTools/blob/main/Media/BurpSuite.png" width="35" height="35" />
+      <img src="Media/BurpSuite.png" class="img-responsive" width="35" height="35" alt="">
     </td>
     <td>
       <h4>Burp Suite</h4>
