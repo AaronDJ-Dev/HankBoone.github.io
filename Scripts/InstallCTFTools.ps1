@@ -1,5 +1,3 @@
-Set-ExecutionPolicy -ExecutionPolicy Unrestricted
-
 <# Make CTFTools Folder #>
 mkdir "C:\Users\$([Environment]::UserName)\Documents\CTFTools\"
 CLEAR
