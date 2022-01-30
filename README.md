@@ -3,7 +3,7 @@
 <table>
   <tr>
     <td>
-    <a href="https://github.com/HankBoone/HankBoone.github.io/blob/main/Scripts/InstallCTFTools.ps1" download>Download CTFTools Installer Script</a>
+      <a href="https://github.com/HankBoone/HankBoone.github.io/blob/main/Scripts/InstallCTFTools.ps1" target="_blank">Download CTFTools Installer Script</a>
     </td>
   </tr>
   </table>
