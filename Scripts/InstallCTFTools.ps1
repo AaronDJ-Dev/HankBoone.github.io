@@ -47,8 +47,8 @@ Clear-Host
     			#Do something here
     			#Stop-Computer -Force
 				}
-                Write-Output $message
 				Clear-Host
+                Write-Output $message
 
                 $message = "Burp Suite Downloaded!"
 				<# Download Burp Suite Windows #>
@@ -58,11 +58,21 @@ Clear-Host
 				$notify.icon = [System.Drawing.SystemIcons]::Information
 				$notify.visible = $true
 				$notify.showballoontip(10,'Burp Suite','Downloading Burp Suite Windows Version',[system.windows.forms.tooltipicon]::None)
-				$source = 'https://raw.githubusercontent.com/HankBoone/HankBoone.github.io/main/Installers/burpsuite_community_windows-x64_v2021_12_1.exe'
+				$source = 'https://media.githubusercontent.com/media/HankBoone/HankBoone.github.io/main/Installers/burpsuite_community_windows-x64_v2021_12_1.exe'
 				$destination = "C:\Users\$([Environment]::UserName)\Documents\CTFTools\Installers\burpsuite_community_windows-x64_v2021_12_1.exe"
-				Invoke-WebRequest -Uri $source -OutFile $destination
-                Write-Output $message
+				$job = Start-BitsTransfer -Source $source -Destination $destination -DisplayName "Burp Suite" -Description "Downloading Burp Suite" -Dynamic
+				While ($job.JobState -eq "Transferring" -Or $job.JobState -eq "Connecting") {
+    			Start-Sleep -Seconds 20
+				}
+
+				If ($job.InternalErrorCode -ne 0) {
+    			("Error downloading the file {0}" -f $job.InternalErrorCode) | Out-File C:\downloads\downloaderror.log
+				} else {
+    			#Do something here
+    			#Stop-Computer -Force
+				}
 				Clear-Host
+                Write-Output $message
 
                 $message = "Metasploit Downloaded!"
 				<# Download Metasploit Windows #>
@@ -72,11 +82,21 @@ Clear-Host
 				$notify.icon = [System.Drawing.SystemIcons]::Information
 				$notify.visible = $true
 				$notify.showballoontip(10,'Metasploit','Downloading Metasploit Windows Version',[system.windows.forms.tooltipicon]::None)
-				$source = 'https://raw.githubusercontent.com/HankBoone/HankBoone.github.io/main/Installers/metasploitframework-latest.msi'
+				$source = 'https://media.githubusercontent.com/media/HankBoone/HankBoone.github.io/main/Installers/metasploitframework-latest.msi'
 				$destination = "C:\Users\$([Environment]::UserName)\Documents\CTFTools\Installers\metasploitframework-latest.msi"
-				Invoke-WebRequest -Uri $source -OutFile $destination
-                Write-Output $message
+				$job = Start-BitsTransfer -Source $source -Destination $destination -DisplayName "Metasploit" -Description "Downloading Metasploit" -Dynamic
+				While ($job.JobState -eq "Transferring" -Or $job.JobState -eq "Connecting") {
+    			Start-Sleep -Seconds 20
+				}
+
+				If ($job.InternalErrorCode -ne 0) {
+    			("Error downloading the file {0}" -f $job.InternalErrorCode) | Out-File C:\downloads\downloaderror.log
+				} else {
+    			#Do something here
+    			#Stop-Computer -Force
+				}
 				Clear-Host
+                Write-Output $message
 
                 $message = "Wireshark Downloaded!"
 				<# Download Wireshark Windows #>
@@ -86,11 +106,21 @@ Clear-Host
 				$notify.icon = [System.Drawing.SystemIcons]::Information
 				$notify.visible = $true
 				$notify.showballoontip(10,'Wireshark','Downloading Wireshark Windows Edition',[system.windows.forms.tooltipicon]::None)
-				$source = 'https://raw.githubusercontent.com/HankBoone/HankBoone.github.io/main/Installers/Wireshark-win64-3.6.1.exe'
+				$source = 'https://media.githubusercontent.com/media/HankBoone/HankBoone.github.io/main/Installers/Wireshark-win64-3.6.1.exe'
 				$destination = "C:\Users\$([Environment]::UserName)\Documents\CTFTools\Installers\Wireshark-win64-3.6.1.exe"
-				Invoke-WebRequest -Uri $source -OutFile $destination
-                Write-Output $message
+				$job = Start-BitsTransfer -Source $source -Destination $destination -DisplayName "Wireshark" -Description "Downloading Wireshark" -Dynamic
+				While ($job.JobState -eq "Transferring" -Or $job.JobState -eq "Connecting") {
+    			Start-Sleep -Seconds 20
+				}
+
+				If ($job.InternalErrorCode -ne 0) {
+    			("Error downloading the file {0}" -f $job.InternalErrorCode) | Out-File C:\downloads\downloaderror.log
+				} else {
+    			#Do something here
+    			#Stop-Computer -Force
+				}
 				Clear-Host
+                Write-Output $message
 
                 $message = "Nmap Downloaded!"
 				<# Download NMAP Windows #>
@@ -100,9 +130,19 @@ Clear-Host
 				$notify.icon = [System.Drawing.SystemIcons]::Information
 				$notify.visible = $true
 				$notify.showballoontip(10,'Nmap','Downloading Nmap Windows Edition',[system.windows.forms.tooltipicon]::None)
-				$source = 'https://raw.githubusercontent.com/HankBoone/HankBoone.github.io/main/Installers/nmap-7.92-setup.exe'
+				$source = 'https://media.githubusercontent.com/media/HankBoone/HankBoone.github.io/main/Installers/Installers/nmap-7.92-setup.exe'
 				$destination = "C:\Users\$([Environment]::UserName)\Documents\CTFTools\Installers\nmap-7.92-setup.exe"
-				Invoke-WebRequest -Uri $source -OutFile $destination
+				$job = Start-BitsTransfer -Source $source -Destination $destination -DisplayName "Nmap" -Description "Downloading Nmap" -Dynamic
+				While ($job.JobState -eq "Transferring" -Or $job.JobState -eq "Connecting") {
+    			Start-Sleep -Seconds 20
+				}
+
+				If ($job.InternalErrorCode -ne 0) {
+    			("Error downloading the file {0}" -f $job.InternalErrorCode) | Out-File C:\downloads\downloaderror.log
+				} else {
+    			#Do something here
+    			#Stop-Computer -Force
+				}
 				Clear-Host
                 Write-Output $message
 				Invoke-Item "C:\Users\$([Environment]::UserName)\Documents\CTFTools"
@@ -141,10 +181,21 @@ Clear-Host
 				$notify.icon = [System.Drawing.SystemIcons]::Information
 				$notify.visible = $true
 				$notify.showballoontip(10,'Burp Suite','Downloading Burp Suite Windows Version',[system.windows.forms.tooltipicon]::None)
-				$source = 'https://raw.githubusercontent.com/HankBoone/HankBoone.github.io/main/Installers/burpsuite_community_windows-x64_v2021_12_1.exe'
+				$source = 'https://media.githubusercontent.com/media/HankBoone/HankBoone.github.io/main/Installers/burpsuite_community_windows-x64_v2021_12_1.exe'
 				$destination = "C:\Users\$([Environment]::UserName)\Documents\CTFTools\Installers\burpsuite_community_windows-x64_v2021_12_1.exe"
-				Invoke-WebRequest -Uri $source -OutFile $destination
+				$job = Start-BitsTransfer -Source $source -Destination $destination -DisplayName "Burp Suite" -Description "Downloading Burp Suite" -Dynamic
+				While ($job.JobState -eq "Transferring" -Or $job.JobState -eq "Connecting") {
+    			Start-Sleep -Seconds 20
+				}
+
+				If ($job.InternalErrorCode -ne 0) {
+    			("Error downloading the file {0}" -f $job.InternalErrorCode) | Out-File C:\downloads\downloaderror.log
+				} else {
+    			#Do something here
+    			#Stop-Computer -Force
+				}
 				Clear-Host
+                Write-Output $message
 				Invoke-Item "C:\Users\$([Environment]::UserName)\Documents\CTFTools"
             }
             3 {
@@ -156,10 +207,21 @@ Clear-Host
 				$notify.icon = [System.Drawing.SystemIcons]::Information
 				$notify.visible = $true
 				$notify.showballoontip(10,'Metasploit','Downloading Metasploit Windows Version',[system.windows.forms.tooltipicon]::None)
-				$source = 'https://raw.githubusercontent.com/HankBoone/HankBoone.github.io/main/Installers/metasploitframework-latest.msi'
+				$source = 'https://media.githubusercontent.com/media/HankBoone/HankBoone.github.io/main/Installers/metasploitframework-latest.msi'
 				$destination = "C:\Users\$([Environment]::UserName)\Documents\CTFTools\Installers\metasploitframework-latest.msi"
-				Invoke-WebRequest -Uri $source -OutFile $destination
+				$job = Start-BitsTransfer -Source $source -Destination $destination -DisplayName "Metasploit" -Description "Downloading Metasploit" -Dynamic
+				While ($job.JobState -eq "Transferring" -Or $job.JobState -eq "Connecting") {
+    			Start-Sleep -Seconds 20
+				}
+
+				If ($job.InternalErrorCode -ne 0) {
+    			("Error downloading the file {0}" -f $job.InternalErrorCode) | Out-File C:\downloads\downloaderror.log
+				} else {
+    			#Do something here
+    			#Stop-Computer -Force
+				}
 				Clear-Host
+                Write-Output $message
 				Invoke-Item "C:\Users\$([Environment]::UserName)\Documents\CTFTools"
             }
             4 {
@@ -171,10 +233,21 @@ Clear-Host
 				$notify.icon = [System.Drawing.SystemIcons]::Information
 				$notify.visible = $true
 				$notify.showballoontip(10,'Wireshark','Downloading Wireshark Windows Edition',[system.windows.forms.tooltipicon]::None)
-				$source = 'https://raw.githubusercontent.com/HankBoone/HankBoone.github.io/main/Installers/Wireshark-win64-3.6.1.exe'
+				$source = 'https://media.githubusercontent.com/media/HankBoone/HankBoone.github.io/main/Installers/Wireshark-win64-3.6.1.exe'
 				$destination = "C:\Users\$([Environment]::UserName)\Documents\CTFTools\Installers\Wireshark-win64-3.6.1.exe"
-				Invoke-WebRequest -Uri $source -OutFile $destination
+				$job = Start-BitsTransfer -Source $source -Destination $destination -DisplayName "Wireshark" -Description "Downloading Wireshark" -Dynamic
+				While ($job.JobState -eq "Transferring" -Or $job.JobState -eq "Connecting") {
+    			Start-Sleep -Seconds 20
+				}
+
+				If ($job.InternalErrorCode -ne 0) {
+    			("Error downloading the file {0}" -f $job.InternalErrorCode) | Out-File C:\downloads\downloaderror.log
+				} else {
+    			#Do something here
+    			#Stop-Computer -Force
+				}
 				Clear-Host
+                Write-Output $message
 				Invoke-Item "C:\Users\$([Environment]::UserName)\Documents\CTFTools"
             }
             5 {
@@ -186,10 +259,21 @@ Clear-Host
 				$notify.icon = [System.Drawing.SystemIcons]::Information
 				$notify.visible = $true
 				$notify.showballoontip(10,'Nmap','Downloading Nmap Windows Edition',[system.windows.forms.tooltipicon]::None)
-				$source = 'https://raw.githubusercontent.com/HankBoone/HankBoone.github.io/main/Installers/nmap-7.92-setup.exe'
+				$source = 'https://media.githubusercontent.com/media/HankBoone/HankBoone.github.io/main/Installers/nmap-7.92-setup.exe'
 				$destination = "C:\Users\$([Environment]::UserName)\Documents\CTFTools\Installers\nmap-7.92-setup.exe"
-				Invoke-WebRequest -Uri $source -OutFile $destination
+				$job = Start-BitsTransfer -Source $source -Destination $destination -DisplayName "Nmap" -Description "Downloading Nmap" -Dynamic
+				While ($job.JobState -eq "Transferring" -Or $job.JobState -eq "Connecting") {
+    			Start-Sleep -Seconds 20
+				}
+
+				If ($job.InternalErrorCode -ne 0) {
+    			("Error downloading the file {0}" -f $job.InternalErrorCode) | Out-File C:\downloads\downloaderror.log
+				} else {
+    			#Do something here
+    			#Stop-Computer -Force
+				}
 				Clear-Host
+                Write-Output $message
 				Invoke-Item "C:\Users\$([Environment]::UserName)\Documents\CTFTools"
             }
          }
