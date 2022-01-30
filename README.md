@@ -26,6 +26,13 @@
     <td>
       <h4>Metasploit</h4>
     </td>
+  <td>
+    What is Metasploit used for?
+The Metasploit framework is a very powerful
+    </br> tool which can be used by cybercriminals as well as ethical hackers to probe
+    </br> systematic vulnerabilities on networks and servers. Because it's an open-source
+    </br> framework, it can be easily customized and used with most operating systems.
+  </td>
     </tr>
   <tr>
     <td>
