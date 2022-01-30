@@ -1,14 +1,14 @@
 <# Make CTFTools Folder #>
 mkdir "C:\Users\$([Environment]::UserName)\Documents\CTFTools\"
-CLEAR
+Clear-Host
 
 <# Make Installers Folder #>
 mkdir "C:\Users\$([Environment]::UserName)\Documents\CTFTools\Installers\"
-CLEAR
+Clear-Host
 
 <# Make VMs Folder #>
 mkdir "C:\Users\$([Environment]::UserName)\Documents\CTFTools\VMs\"
-CLEAR
+Clear-Host
 
      $title = "ChaosWraith CTF Tools Downloader"
      $message = "Please select resources for download!"
@@ -36,9 +36,9 @@ CLEAR
 				$notify.showballoontip(10,'Kali VMWare','Downloading VMWare Kali VM',[system.windows.forms.tooltipicon]::None)
 				$source = 'https://kali.download/virtual-images/kali-2021.4a/kali-linux-2021.4a-vmware-amd64.7z'
 				$destination = "C:\Users\$([Environment]::UserName)\Documents\CTFTools\VMs\kali-linux-2021.4a-vmware-amd64.7z"
-				$job = Start-BitsTransfer -Source $source -Destination $destination
+				$job = Start-BitsTransfer -Source $source -Destination $destination -Description "Downloading Kali VMWare" -DisplayName "Kali VMWare"
 				While ($job.JobState -eq "Transferring" -Or $job.JobState -eq "Connecting") {
-    			Sleep -Seconds 20
+    			Start-Sleep -Seconds 20
 				}
 
 				If ($job.InternalErrorCode -ne 0) {
@@ -48,7 +48,7 @@ CLEAR
     			#Stop-Computer -Force
 				}
                 Write-Output $message
-				CLEAR
+				Clear-Host
 
                 $message = "Burp Suite Downloaded!"
 				<# Download Burp Suite Windows #>
@@ -60,9 +60,9 @@ CLEAR
 				$notify.showballoontip(10,'Burp Suite','Downloading Burp Suite Windows Version',[system.windows.forms.tooltipicon]::None)
 				$source = 'https://raw.githubusercontent.com/HankBoone/HankBoone.github.io/main/Installers/burpsuite_community_windows-x64_v2021_12_1.exe'
 				$destination = "C:\Users\$([Environment]::UserName)\Documents\CTFTools\Installers\burpsuite_community_windows-x64_v2021_12_1.exe"
-				Invoke-WebRequest -Uri $source -OutFile $destination
+				Invoke-WebRequest -Uri $source -OutFile $destination -
                 Write-Output $message
-				CLEAR
+				Clear-Host
 
                 $message = "Metasploit Downloaded!"
 				<# Download Metasploit Windows #>
@@ -76,7 +76,7 @@ CLEAR
 				$destination = "C:\Users\$([Environment]::UserName)\Documents\CTFTools\Installers\metasploitframework-latest.msi"
 				Invoke-WebRequest -Uri $source -OutFile $destination
                 Write-Output $message
-				CLEAR
+				Clear-Host
 
                 $message = "Wireshark Downloaded!"
 				<# Download Wireshark Windows #>
@@ -90,7 +90,7 @@ CLEAR
 				$destination = "C:\Users\$([Environment]::UserName)\Documents\CTFTools\Installers\Wireshark-win64-3.6.1.exe"
 				Invoke-WebRequest -Uri $source -OutFile $destination
                 Write-Output $message
-				CLEAR
+				Clear-Host
 
                 $message = "Nmap Downloaded!"
 				<# Download NMAP Windows #>
@@ -103,9 +103,9 @@ CLEAR
 				$source = 'https://raw.githubusercontent.com/HankBoone/HankBoone.github.io/main/Installers/nmap-7.92-setup.exe'
 				$destination = "C:\Users\$([Environment]::UserName)\Documents\CTFTools\Installers\nmap-7.92-setup.exe"
 				Invoke-WebRequest -Uri $source -OutFile $destination
-				CLEAR
+				Clear-Host
                 Write-Output $message
-				ii "C:\Users\$([Environment]::UserName)\Documents\CTFTools"
+				Invoke-Item "C:\Users\$([Environment]::UserName)\Documents\CTFTools"
             }
              1 {
                 $message = "Kali VMWare Downloaded!"
@@ -118,9 +118,9 @@ CLEAR
 				$notify.showballoontip(10,'Kali VMWare','Downloading VMWare Kali VM',[system.windows.forms.tooltipicon]::None)
 				$source = 'https://kali.download/virtual-images/kali-2021.4a/kali-linux-2021.4a-vmware-amd64.7z'
 				$destination = "C:\Users\$([Environment]::UserName)\Documents\CTFTools\VMs\kali-linux-2021.4a-vmware-amd64.7z"
-				$job = Start-BitsTransfer -Source $source -Destination $destination
+				$job = Start-BitsTransfer -Source $source -Destination $destination -Description "Downloading Kali VMWare" -DisplayName "Kali VMWare"
 				While ($job.JobState -eq "Transferring" -Or $job.JobState -eq "Connecting") {
-						Sleep -Seconds 20
+						Start-Sleep -Seconds 20
 				}
 
 				If ($job.InternalErrorCode -ne 0) {
@@ -129,8 +129,8 @@ CLEAR
 						#Do something here
 						#Stop-Computer -Force
 				}
-				CLEAR
-				ii "C:\Users\$([Environment]::UserName)\Documents\CTFTools"
+				Clear-Host
+				Invoke-Item "C:\Users\$([Environment]::UserName)\Documents\CTFTools"
              }
             2 {
                 $message = "Burp Suite Downloaded!"
@@ -144,8 +144,8 @@ CLEAR
 				$source = 'https://raw.githubusercontent.com/HankBoone/HankBoone.github.io/main/Installers/burpsuite_community_windows-x64_v2021_12_1.exe'
 				$destination = "C:\Users\$([Environment]::UserName)\Documents\CTFTools\Installers\burpsuite_community_windows-x64_v2021_12_1.exe"
 				Invoke-WebRequest -Uri $source -OutFile $destination
-				CLEAR
-				ii "C:\Users\$([Environment]::UserName)\Documents\CTFTools"
+				Clear-Host
+				Invoke-Item "C:\Users\$([Environment]::UserName)\Documents\CTFTools"
             }
             3 {
                 $message = "Metasploit Downloaded!"
@@ -159,8 +159,8 @@ CLEAR
 				$source = 'https://raw.githubusercontent.com/HankBoone/HankBoone.github.io/main/Installers/metasploitframework-latest.msi'
 				$destination = "C:\Users\$([Environment]::UserName)\Documents\CTFTools\Installers\metasploitframework-latest.msi"
 				Invoke-WebRequest -Uri $source -OutFile $destination
-				CLEAR
-				ii "C:\Users\$([Environment]::UserName)\Documents\CTFTools"
+				Clear-Host
+				Invoke-Item "C:\Users\$([Environment]::UserName)\Documents\CTFTools"
             }
             4 {
                 $message = "Wireshark Downloaded!"
@@ -174,8 +174,8 @@ CLEAR
 				$source = 'https://raw.githubusercontent.com/HankBoone/HankBoone.github.io/main/Installers/Wireshark-win64-3.6.1.exe'
 				$destination = "C:\Users\$([Environment]::UserName)\Documents\CTFTools\Installers\Wireshark-win64-3.6.1.exe"
 				Invoke-WebRequest -Uri $source -OutFile $destination
-				CLEAR
-				ii "C:\Users\$([Environment]::UserName)\Documents\CTFTools"
+				Clear-Host
+				Invoke-Item "C:\Users\$([Environment]::UserName)\Documents\CTFTools"
             }
             5 {
                 $message = "Nmap Downloaded!"
@@ -189,8 +189,8 @@ CLEAR
 				$source = 'https://raw.githubusercontent.com/HankBoone/HankBoone.github.io/main/Installers/nmap-7.92-setup.exe'
 				$destination = "C:\Users\$([Environment]::UserName)\Documents\CTFTools\Installers\nmap-7.92-setup.exe"
 				Invoke-WebRequest -Uri $source -OutFile $destination
-				CLEAR
-				ii "C:\Users\$([Environment]::UserName)\Documents\CTFTools"
+				Clear-Host
+				Invoke-Item "C:\Users\$([Environment]::UserName)\Documents\CTFTools"
             }
          }
 		 Write-Output $message
